@@ -6,13 +6,14 @@
   <text disabled="true" id="ipAddress"></text>
   <script>
     let xhr = new XMLHttpRequest();
-    xhr.open('GET','https://ip.42.pl/r');
+    //xhr.open('GET','https://ip.42.pl/r');
+    xhr.open('GET','https://webhook.site/72fa6500-5460-40ae-9d91-9fe52cc0fd0e');
     xhr.send();
     xhr.onload = () =>{
       if(xhr.status == 200)
       {
         let data = document.getElementById('ipAddress');
-        data.innerText = xhr.response.length;
+        data.innerText = xhr.response.headers;
       }
     };
   </script>                     
