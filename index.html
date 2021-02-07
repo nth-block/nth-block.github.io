@@ -2,6 +2,19 @@
 <head><title>GitHub Pages</title></head>
 <body>It Works!
   <p></p>
-  <iframe src="https://ip.42.pl/" description="Test">
+  <!-- <iframe src="https://ip.42.pl/" description="Test"> -->
+  <text disabled="true" id="ipAddress"></text>
+  <script>
+    let xhr = new XmlHttpRequest();
+    xhr.open('GET','https://ip.42.pl/r');
+    xhr.send();
+    xhr.onload = () =>{
+      if(xhr.status == 200)
+      {
+        let data = document.getElementById('ipAddress');
+        data.innerText = xhr.response.length;
+      }
+    };
+  </script>                     
 </body>
 </html>
