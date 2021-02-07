@@ -5,7 +5,7 @@
   <!-- <iframe src="https://ip.42.pl/" description="Test"> -->
   <text disabled="true" id="ipAddress"></text>
   <script>
-    let xhr = new XmlHttpRequest();
+    let xhr = new XMLHttpRequest();
     xhr.open('GET','https://ip.42.pl/r');
     xhr.send();
     xhr.onload = () =>{
